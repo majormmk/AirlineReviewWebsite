@@ -1,0 +1,824 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: Century Gothic;
+}
+.homepage{
+background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/airplane.jpg);
+height: 100vh;
+background-size: cover;
+}
+.selection{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/plane.jpg);
+    height: 100vh;
+    background-size: cover;
+    }
+.nav{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+.nav-li{
+    display: inline-block;
+    
+}
+
+.nav li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    border: 1px solid transparent; 
+    transition: 0.5s ease;
+    
+}
+
+ul li a:hover{
+    background-color: white;
+    color: black;
+}
+
+.main{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.title h1{
+    font-size: 50px;
+    color: white;
+}
+
+.button{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.btn{
+    border: 1px solid white;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+#loginPage{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/airport.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+.loginBox{
+    width: 320px;
+    height: 420px;
+    background: white;
+    color: black;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.pilot{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+h1{
+    margin: 0%;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.loginBox p{
+    font-weight: bold;
+}
+.loginBox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.loginBox input[type="text"]
+{
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 40px;
+}
+.loginBox input
+{
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 40px;
+}
+.loginBox input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: red;
+    color: white;
+}
+.loginBox a{
+    color: black;
+}
+.loginBox a:hover{
+    color: red;
+}
+
+.airbutton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.airbtn{
+    border: 1px solid white;
+    padding: 50px 70px;
+    color: white;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+.airbtn:hover{
+    background-color: white;
+    color: black;
+}
+
+#registerPage{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/pilot.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+.registerBox{
+    width: 320px;
+    height: 500px;
+    background: white;
+    color: black;
+    top: 55%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.registerBox p{
+    font-weight: bold;
+}
+.registerBox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.registerBox input[type="text"], input [type="password"]
+{
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 40px;
+}
+.registerBox input
+{
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 40px;
+}
+.registerBox input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: red;
+    color: white;
+}
+.registerBox a{
+    color: black;
+}
+.registerBox a:hover{
+    color: red;
+}
+#fsaPage{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/fsa.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+.turkbtn{
+    border: 1px solid white;
+    padding: 10px 70px;
+    color: white;
+    text-decoration: none;
+    transition: 0.6s ease;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.turkbtn:hover{
+    background-color: white;
+    color: black;
+    background-image: url(../static/images/logos/turkish.png);
+    height: 30%;
+    width:7%;
+}
+.ekbtn{
+    border: 1px solid white;
+    padding: 10px 70px;
+    color: white;
+    text-decoration: none;
+    transition: 0.6s ease;
+    position: absolute;
+    top: 30%;
+    left: 68%;
+    transform: translate(-50%,-50%);
+}
+.ekbtn:hover{
+    background-color: white;
+    color: black;
+    background-image: url(../static/images/logos/emirates.png);
+    height: 30%;
+}
+.eabtn{
+    border: 1px solid white;
+    padding: 10px 70px;
+    color: white;
+    text-decoration: none;
+    transition: 0.6s ease;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    
+}
+.eabtn:hover{
+    background-color: white;
+    color: black;
+    background-image: url(../static/images/logos/etihad.png);
+    height: 30%;
+}
+.siabtn{
+    border: 1px solid white;
+    padding: 10px 70px;
+    color: white;
+    text-decoration: none;
+    transition: 0.6s ease;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.siabtn:hover{
+    background-color: white;
+    color: black;
+    background-image: url(../static/images/logos/swiss.jpg);
+    height: 30%;  
+    width: 7%;
+}
+.etihadPage{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/etihadBackground.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.heading{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 300%; 
+    top: 10%;
+    left: 5%;
+    position: absolute; 
+    color: white;  
+}
+.etihadimg{
+    position: absolute; 
+    float: left; 
+}
+.description{
+    margin-left: 40%;
+    font-size: 40%;
+    position: relative;
+    float: inline-end;
+
+}
+.heading-comment{
+    margin-top: 32%;
+    left: 5%;
+    float: left;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 100%;
+}
+.nameForReview{
+    margin-top: 30%;
+    left: 5%;
+    float: left;
+    position: absolute;
+    width: 20%;
+    height: 50px;
+    font-weight: bold;
+    font-size: 100%;
+    border-radius: 12px;
+    
+}
+.review{
+    margin-top: 35%;
+    left: 5%;
+    float: left;
+    position: absolute;
+    width: 70%;
+    height: 50px ;
+    font-weight: bold;
+    font-size: 100%;
+    border-radius: 12px;
+}
+.submit-review{
+    margin-top: 40%;
+    left: 5%;
+    float: left;
+    position: absolute;
+    padding: 10px;
+    width: 15%;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 100%;
+}
+.emiratesPage{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/emiratesBackground.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.turkishPage{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/turkishBackground.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.swissPage{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/swissBackground.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#lsaPage{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/fsa.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.flydbtn{
+    border: 1px solid white;
+    padding: 10px 70px;
+    color: white;
+    text-decoration: none;
+    transition: 0.6s ease;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.flydbtn:hover{
+    background-color: white;
+    color: black;
+    background-image: url(../static/images/logos/flydubai.png);
+    height: 30%;
+    width:4%;
+}
+.airAbtn{
+    border: 1px solid white;
+    padding: 10px 70px;
+    color: white;
+    text-decoration: none;
+    transition: 0.6s ease;
+    position: absolute;
+    top: 30%;
+    left: 68%;
+    transform: translate(-50%,-50%);
+}
+.airAbtn:hover{
+    background-color: white;
+    color: black;
+    background-image: url(../static/images/logos/airarabia.png);
+    height: 30%;
+}
+.indigobtn{
+    border: 1px solid white;
+    padding: 10px 70px;
+    color: white;
+    text-decoration: none;
+    transition: 0.6s ease;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    
+}
+.indigobtn:hover{
+    background-color: white;
+    color: black;
+    background-image: url(../static/images/logos/indigo.jpeg);
+    height: 30%;
+}
+.virginbtn{
+    border: 1px solid white;
+    padding: 10px 70px;
+    color: white;
+    text-decoration: none;
+    transition: 0.6s ease;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.virginbtn:hover{
+    background-color: white;
+    color: black;
+    background-image: url(../static/images/logos/virginatlantic.png);
+    height: 35%;  
+    width: 10%;
+}
+.flyDubaiPage{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/flyDubaiBackground.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.indigoPage{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/indigoBackground.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.airarabiaPage{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/airarabiaBackground.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.virginAtlanticPage{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/virginBackground.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.box{
+    background: transparent;
+}
+.search-text{
+border-top: 10%;
+border-left: 10%;
+border-bottom: 10%; 
+border-right: 0%;
+background: none;
+outline: none;
+float: left;
+padding: 0px;
+color: white;
+line-height: 40px;
+width:0px;
+transition: 0.6s ease;
+}
+.box:hover > .search-text{
+    width: 200px;
+    
+}
+
+.search-btn{
+color: white;
+display: inline-block;
+justify-content: center;
+align-items: center;
+}
+
+
+  
+  #myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 10%;
+    float: right;
+    margin-right:18%;
+    visibility: hidden;
+  }
+  
+  #myUL li a {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+
+  }
+  #myUL li a:hover:not(.header) {
+    background-color: #eee;
+  }
+  .aboutUsPage{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/airplaneBackground.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+.aboutUsHeading{
+    float: left;
+    color: white;
+    font-size: 350%;
+    margin-left: 5%;
+}
+.aboutUsdescription{
+    top: 30%;
+    position: absolute;
+    color: white;
+    margin-left: 50%;
+    float: right;
+    text-align: center;
+}
+.contactBox{
+    width: 320px;
+    height: 500px;
+    background: white;
+    color: black;
+    top: 55%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.contactBox p{
+    font-weight: bold;
+}
+.contactBox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.contactBox input[type="text"]
+{
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 40px;
+}
+
+.contactBox input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: red;
+    color: white;
+}
+.contactBox a{
+    color: black;
+}
+.contactBox a:hover{
+    color: red;
+}
+.comment{
+    margin-top: 30%;
+    margin-left: 5%;
+    color: white;
+    position: absolute;
+    font-size: 200%;
+}
+#airlineTable{
+margin-top: 45%;
+margin-left: 10%;
+width: 80%;
+position: absolute;
+border-color: white;
+}
+.guestbookPage{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/viewBackground.jpg);
+    height: 100vh;
+    background-size: cover;
+    
+}
+.guestbookTable{
+    color: white;
+    margin-left: 10%;
+    width: 80%;
+    border-color: aqua;
+}
+.guestbookHeading{
+    float: center;
+    color: white;
+    font-size: 350%;
+    margin-left: 5%;
+}
+
+.weatherinfoDubai{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    background-color: lightgrey;
+    width: 300px;
+    border: 7px solid #152238;
+    padding: 50px;
+    margin: 20px;
+    margin-left: 4%;
+    float: left;
+}
+
+.weatherinfoSydney{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    background-color: lightgrey;
+    width: 300px;
+    border: 7px solid #152238;
+    padding: 50px;
+    margin: 20px;
+    float: left;
+}
+
+.weatherinfoNY{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    background-color: lightgrey;
+    width: 300px;
+    border: 7px solid #152238;
+    padding: 50px;
+    margin: 20px;
+    float: left;
+}
+.weatherinfoND{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    background-color: lightgrey;
+    width: 300px;
+    border: 7px solid #152238;
+    padding: 50px;
+    margin: 20px;
+    margin-left: 17%;
+    display: inline-block;
+}
+.weatherinfoTokyo{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    background-color:lightgray;
+    width: 300px;
+    border: 7px solid #152238;
+    padding: 50px;
+    margin: 20px;
+    display: inline-block;
+}
+.weathertitle{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: whitesmoke;
+}
+.weatherpage{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/weatherBackground.jpg);
+    height: 100vh;
+    background-size: cover;
+    
+}
+.ekScheduleTitle{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: black;
+}
+
+.ekTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+.ekTable td, .ekTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+.ekTable tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+  
+.ekTable tr:hover {
+    background-color: #ddd;
+}
+  
+.ekTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: gray;
+    color: white;
+  }
+  .stocksPage{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../static/images/backgrounds/stocksBackground.jpg);
+    height: 100vh;
+    background-size: cover;
+  }
+  .stockTitle{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: whitesmoke;
+}
+.stockinfoSJ{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    background-color: lightgrey;
+    width: 300px;
+    border: 7px solid #152238;
+    padding: 50px;
+    margin: 20px;
+    margin-left: 4%;
+    float: left;
+}
+.stockinfoDA{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    background-color: lightgrey;
+    width: 300px;
+    border: 7px solid #152238;
+    padding: 50px;
+    margin: 20px;
+    display: inline-block;
+}
+.stockinfoSA{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    background-color: lightgrey;
+    width: 300px;
+    border: 7px solid #152238;
+    padding: 50px;
+    margin: 20px;
+    display: inline-block;
+}
+
+.stockinfoCP{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    background-color: lightgrey;
+    width: 300px;
+    border: 7px solid #152238;
+    padding: 50px;
+    margin: 20px;
+    margin-left: 4%;
+    display: inline-block;
+}
+.stockinfoAA{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    background-color: lightgrey;
+    width: 300px;
+    border: 7px solid #152238;
+    padding: 50px;
+    margin: 20px;
+    display: inline-block;
+}
+.stockinfoAsia{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    background-color:lightgray;
+    width: 300px;
+    border: 7px solid #152238;
+    padding: 50px;
+    margin: 20px;
+    display: inline-block;
+}
+.message1{
+    text-align: center;
+    margin-top: 30%;
+    color: whitesmoke;
+    font-size: 50px;
+}

@@ -1,0 +1,100 @@
+<!-- Home Page -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unravel Your Travel </title>
+        <!-- Linking of the CSS stylesheet -->
+        <link rel="stylesheet" type="text/css" href="../static/style.css">
+     </head>
+<body class="homepage">
+    <img class="companyLogo" src="static/images/logos/companyLogo.jpg" height="50" width="50" align="left">
+     <!-- Creating navigation bar for the page -->
+    <header>
+        <div class="main">
+            <ul class="nav">
+                <li class="nav-li"><a href="/">Home</a></li>
+                <!-- Setting a condition for the login or Logout -->
+                {% if session['logged in'] == True %}
+                <li class="nav-li">
+                    <a href="logout">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-li">
+                    <a href="login">Login</a>
+                </li>
+                {%endif%}
+                <li class="nav-li"><a href="aboutUs">About Us</a></li>
+                <li class="nav-li"><a href="airlineStocks">Stocks</a></li>
+                <li class="nav-li"><a href="weather">Weather</a></li>
+                <li class="nav-li"><a href="contact">Guestbook</a></li>
+                <li class="nav-li"><a href="information">Airlines</a></li>
+                <!-- Creating the search function -->
+                <li class="nav-li">
+                    <div class="search">
+                        <div class="box">
+
+                        <input type="text" id="myInput" class="search-text" onkeyup="myFunction()" onmouseover="popup()" onmouseout="hide()" placeholder="Search Here">
+                        <a href="#" class="search-btn"> 
+                               Search
+                        </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <ul onmouseover="popup()" onmouseout="hide()" id="myUL">
+            <li><a href="etihadAir">Etihad Airways</a></li>
+            <li><a href="turkishAir">Turkish Airways</a></li>
+            <li><a href="emiratesAir">Emirates</a></li>
+            <li><a href="swissAir">Swiss Int Air</a></li>
+            <li><a href="indigo">Indigo</a></li>
+            <li><a href="flyDubai">FlyDubai</a></li>
+            <li><a href="airArabia">Airarabia</a></li>
+            <li><a href="virginAtlantic">Virgin Air</a></li>
+        </ul>
+        <script>
+            function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                        } else {
+                                li[i].style.display = "none";
+                                }
+                }
+            }
+            function popup(){
+                var a = document.getElementById("myUL");
+                a.setAttribute("style","visibility:visible");
+            }
+            function hide(){
+                var a = document.getElementById("myUL");
+                a.setAttribute("style","visibility:hidden");
+                var b=document.getElementsByClassName("search-text");
+                b.setAttribute("style","width:200px");
+            }
+        </script>
+        <div class="title">
+            <h1>UNRAVEL YOUR TRAVEL</h1>
+        </div>
+        <div class="button">
+            {% if session['logged in'] == True %}
+            <a href="information" class="btn">LOGGED IN</a>
+            {% else %}
+            <a href="registration" class="btn">SIGN UP</a>
+            {%endif%}
+            <a href="information" class="btn">LEARN MORE</a>
+        </div>
+    </header>
+</body>
+</html>

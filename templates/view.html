@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+	<head>
+		<title>View Guestbook</title>
+		<link rel="stylesheet" type="text/css" href="../static/style.css">
+	</head>
+<body class="guestbookPage">
+	<h1 class="guestbookHeading">View Guestbook</h1>
+	<br>
+	<table class="guestbookTable" border = 1>
+		 <tr>
+			<th>Name</th>
+			<th>Email</th> 
+			<th>Comment</th>
+		</tr>
+		{% for entry in entries %}
+			<tr>
+				<td> {{ entry[0]}} </td>
+				<td> {{ entry[0]}} </td>
+				<td> {{ entry[0]}} </td>
+			</tr>
+		{% endfor %}
+	
+	</table>
+
+</body>
+</html>

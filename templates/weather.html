@@ -1,0 +1,47 @@
+<!-- Home Page -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather </title>
+        <!-- Linking of the CSS stylesheet -->
+        <link rel="stylesheet" type="text/css" href="../static/style.css">
+     </head>
+<body class="weatherpage">
+     <!-- Creating navigation bar for the page -->
+    <div class="weathertitle">
+     <p>WEATHER</p>
+    </div>
+     <br>
+     <div class="weatherinfoDubai">
+    <strong style="color: red"> {{message}} </strong>    
+    <p>Dubai </p>
+    <p>{{dubaitempC}}C-{{dubaitemplowC}}C</p>
+    <p>{{dubaistatus}}</p>
+
+    </div>
+    <div class="weatherinfoSydney">
+    <strong style="color: red"> {{message}} </strong>   
+    <p>Sydney </p>
+    <p>{{sydneytempC}}C-{{sydneytemplowC}}C</p>
+    <p>{{sydneystatus}}</p>
+    </div>
+    <div class="weatherinfoNY">
+    <strong style="color: red"> {{message}} </strong>      
+    <p >New York </p>
+    <p>{{newYorktempC}}C-{{newYorktemplowC}}C</p>
+    <p>{{newYorkstatus}}</p>
+</div>
+<div class="weatherinfoND">
+    <strong style="color: red"> {{message}} </strong>
+    <p>New Delhi </p>
+    <p>{{newDelhitempC}}C-{{newDelhitemplowC}}C</p>
+    <p>{{newDelhistatus}}</p>
+</div>
+<div class="weatherinfoTokyo">
+    <strong style="color: red"> {{message}} </strong>
+    <p>Tokyo </p>
+    <p>{{tokyotempC}}C-{{tokyotemplowC}}C</p>
+    <p>{{tokyostatus}}</p>
+</div>
+</body>
+</html>

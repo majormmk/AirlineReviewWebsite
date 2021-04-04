@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Full-Serviced Airlines</title>
+        <link rel="stylesheet" type="text/css" href="../static/style.css">
+    </head>
+<body id="fsaPage">
+    <header>
+            <div class="main">
+                    <ul class="nav">
+                        <li class="nav-li"><a href="/">Home</a></li>
+                        {% if session['logged in'] == True %}
+                <li class="nav-li">
+                        <a href="logout">Logout</a>
+                      </li>
+                      {% else %}
+                      <li class="nav-li">
+                            <a href="login">Login</a>
+                          </li>
+                  {%endif%}
+                        <li class="nav-li"><a href="aboutUs">About Us</a></li>
+                        <li class="nav-li"><a href="airlineStocks">Stocks</a></li>
+                        <li class="nav-li"><a href="weather">Weather</a></li>
+                        <li class="nav-li"><a href="contact">Guestbook</a></li>
+                        <li class="nav-li"><a href="information">Airlines</a></li>
+                        <li class="nav-li"><div class="search">
+                                <div class="box">
+                                <input type="text" id="myInput" class="search-text" onkeyup="myFunction()" onmouseover="popup()" onmouseout="hide()" placeholder="Search Here">
+                                <a href="#" class="search-btn"> 
+                                       Search
+                                </a>
+                            </div>
+                            </div>
+                        </li>
+                    </ul>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <ul onmouseover="popup()" onmouseout="hide()" id="myUL">
+        
+                            <li><a href="etihadAir">Etihad Airways</a></li>
+                            <li><a href="turkishAir">Turkish Airways</a></li>
+                          
+                            <li><a href="emiratesAir">Emirates</a></li>
+                            <li><a href="swissAir">Swiss Int Air</a></li>
+                          
+                            <li><a href="indigo">Indigo</a></li>
+                            <li><a href="flyDubai">FlyDubai</a></li>
+                            <li><a href="airArabia">Airarabia</a></li>
+                            <li><a href="virginAtlantic">Virgin Air</a></li>
+                          </ul>
+                          <script>
+                                function myFunction() {
+                                    var input, filter, ul, li, a, i, txtValue;
+                                    input = document.getElementById("myInput");
+                                    filter = input.value.toUpperCase();
+                                    ul = document.getElementById("myUL");
+                                    li = ul.getElementsByTagName("li");
+                                    for (i = 0; i < li.length; i++) {
+                                        a = li[i].getElementsByTagName("a")[0];
+                                        txtValue = a.textContent || a.innerText;
+                                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                            li[i].style.display = "";
+                                        } else {
+                                            li[i].style.display = "none";
+                                        }
+                                    }
+                                }
+                                function popup(){
+                                    var a = document.getElementById("myUL");
+                                    a.setAttribute("style","visibility:visible");
+                                }
+                                function hide(){
+                                    var a = document.getElementById("myUL");
+                                    a.setAttribute("style","visibility:hidden");
+                                    var b=document.getElementsByClassName("search-text");
+                                    b.setAttribute("style","width:200px");
+                                }
+                                </script>
+            <div class="fsabutton">
+                <a href="turkishAir" class="turkbtn">TURKISH AIRLINES</a>
+            
+                <a href="emiratesAir" class="ekbtn">EMIRATES</a>
+                
+                <a href="etihadAir" class="eabtn">ETIHAD AIRWAYS</a>
+             
+                <a href="swissAir" class="siabtn">SWISS INTERNATIONAL AIRLINES</a>
+                
+            </div>
+    </header>
+</body>
+</html>

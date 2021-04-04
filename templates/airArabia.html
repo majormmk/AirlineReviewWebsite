@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Airarabia</title>
+        <link rel="stylesheet" type="text/css" href="../static/style.css">
+    </head>
+<body class="airarabiaPage">
+    <!-- Creating navigation bar -->
+    <header>
+            <div class="main">
+                    <ul class="nav">
+                        <li class="nav-li"><a href="/">Home</a></li>
+                        {% if session['logged in'] == True %}
+                        <li class="nav-li">
+                                <a href="logout">Logout</a>
+                              </li>
+                              {% else %}
+                              <li class="nav-li">
+                                    <a href="login">Login</a>
+                                  </li>
+                          {%endif%}
+                        <li class="nav-li"><a href="aboutUs">About Us</a></li>
+                        <li class="nav-li"><a href="airlineStocks">Stocks</a></li>
+                        <li class="nav-li"><a href="weather">Weather</a></li>
+                        <li class="nav-li"><a href="contact">Guestbook</a></li>
+                        <li class="nav-li"><a href="information">Airlines</a></li>
+                        <li class="nav-li"><div class="search">
+                                <div class="box">
+                                <input type="text" id="myInput" class="search-text" onkeyup="myFunction()" onmouseover="popup()" onmouseout="hide()" placeholder="Search Here">
+                                <a href="#" class="search-btn"> 
+                                       Search
+                                </a>
+                            </div>
+                            </div>
+                        </li>
+                    </ul>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <!-- Functions for the search bar -->
+                    <ul onmouseover="popup()" onmouseout="hide()" id="myUL">
+        
+                            <li><a href="etihadAir">Etihad Airways</a></li>
+                            <li><a href="turkishAir">Turkish Airways</a></li>
+                          
+                            <li><a href="emiratesAir">Emirates</a></li>
+                            <li><a href="swissAir">Swiss Int Air</a></li>
+                          
+                            <li><a href="indigo">Indigo</a></li>
+                            <li><a href="flyDubai">FlyDubai</a></li>
+                            <li><a href="airArabia">Airarabia</a></li>
+                            <li><a href="virginAtlantic">Virgin Air</a></li>
+                          </ul>
+                          <script>
+                                function myFunction() {
+                                    var input, filter, ul, li, a, i, txtValue;
+                                    input = document.getElementById("myInput");
+                                    filter = input.value.toUpperCase();
+                                    ul = document.getElementById("myUL");
+                                    li = ul.getElementsByTagName("li");
+                                    for (i = 0; i < li.length; i++) {
+                                        a = li[i].getElementsByTagName("a")[0];
+                                        txtValue = a.textContent || a.innerText;
+                                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                            li[i].style.display = "";
+                                        } else {
+                                            li[i].style.display = "none";
+                                        }
+                                    }
+                                }
+                                function popup(){
+                                    var a = document.getElementById("myUL");
+                                    a.setAttribute("style","visibility:visible");
+                                }
+                                function hide(){
+                                    var a = document.getElementById("myUL");
+                                    a.setAttribute("style","visibility:hidden");
+                                    var b=document.getElementsByClassName("search-text");
+                                    b.setAttribute("style","width:200px");
+                                }
+                                </script>
+    </header>
+    <!-- Description of Airline -->
+    <article>
+        <section class="heading">
+            AIRARABIA
+            <br>
+            <img class="airarabiaimg" src="static/images/interior/airarabiapic.jpg" height="300" width="500" align="left">
+            <div class="description">
+            <p>Air Arabia (Arabic: العربية للطيران‎ al-ʿArabiyya aṭ-Ṭayarān) is an Emirati low-cost airline with its head office in the 
+                A1 Building Sharjah Freight Center, Sharjah International Airport. The airline operates scheduled services to 151 
+                destinations in the Middle East, North Africa, the Indian subcontinent, Central Asia and Europe to 22 countries from 
+                Sharjah, 28 destinations in 9 countries from Casablanca, Fez, Nador and Tangier, 11 destinations in 8 countries from 
+                Ras Al Khaimah, and 6 destinations in 4 countries from Alexandria. Air Arabia's main base is Sharjah International Airport. 
+                There is also a hub in Ras Al Khaimah and focus cities in Alexandria and Casablanca. Air Arabia is a member of the 
+                Arab Air Carriers Organization.</p></div>
+        </section>
+        <!-- Keeping Conditions -->
+        <section>
+                {% if session['logged in'] == True %} 
+            <div> 
+            <p class="heading-comment">Comments:</p>   
+            <form action="{{url_for('airArabiac')}}" method="POST">
+                <input class="review" type="textarea" placeholder="Enter review" name="comment">
+                <button type="submit" class="submit-review">Submit</button>
+            </form>
+        </div>
+        {% else %}
+        <p class="comment">You need to be logged in to post comments</p>
+        {% endif %}
+        </section>
+        <!-- Displaying Table -->
+        <section style="color: white">
+
+            
+                <table id="airlineTable" border = 1 align="center">
+                    <tr>
+                        <th>Name</th>
+                        <th>Comment</th>   
+                    </tr>
+                    {% for comment in comments %}
+                    <tr>
+                        <td> {{comment[0]}} </td>
+                        <td> {{comment[1]}} </td>
+                    </tr>
+            {% endfor %}
+        </table>
+        </section>
+    </article>
+</body>
+</html>

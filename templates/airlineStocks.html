@@ -1,0 +1,49 @@
+<!-- Home Page -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Airline Stocks </title>
+        <!-- Linking of the CSS stylesheet -->
+        <link rel="stylesheet" type="text/css" href="../static/style.css">
+     </head>
+<body class="stocksPage">
+     <!-- Creating navigation bar for the page -->
+    <div class="stockTitle">
+     <p>Airline Stock Market</p>
+    </div>
+     <br>
+     <div class="stockinfoSJ">
+          <p>SpiceJet </p>
+          <p>{{stock}}{{currencyText}}</p>
+          <p>{{downRateText}} </p>
+          <p>{{downRateText2}}</p>
+          </div>
+     <div class="stockinfoDA">
+          <p>Delta Airlines</p>
+          <p>{{stock2}} USD</p>
+          
+     </div>
+     <div class="stockinfoSA">
+          <p>Singapore Airlines</p>
+          <p>{{singstock}}{{singcurrencyText}}</p>
+         
+      </div>
+      <div class="stockinfoCP">
+            <p>Cathay Pacific Airways</p>
+            <p>{{cathstock}}{{cathcurrencyText}}</p>
+           
+        </div>
+        <div class="stockinfoAA">
+                <p>American Airlines</p>
+                <p>{{aalstock}} USD</p> 
+        </div>
+        <div class="stockinfoAsia">
+                <p>Asiana Airlines</p>
+                <p>{{asiastock}} {{asiacurrencyText}}</p> 
+        </div>
+
+     <p></p>
+     <br>
+    
+</body>
+</html>
